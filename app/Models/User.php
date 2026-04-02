@@ -29,4 +29,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+// Relation: User have many Events
+    public function events()
+    {
+        return $this->hasMany(Event::class);
+    }
 }
