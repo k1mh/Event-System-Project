@@ -63,7 +63,7 @@
                     {{-- Buttons --}}
                     <div class="flex gap-3">
                         <button type="submit"
-                                class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">
+                                class="bg-blue-500 text-gray px-6 py-2 rounded hover:bg-blue-600">
                             Create Event
                         </button>
                         <a href="{{ route('events.index') }}"

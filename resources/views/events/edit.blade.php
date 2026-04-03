@@ -64,7 +64,7 @@
                     {{-- Buttons --}}
                     <div class="flex gap-3">
                         <button type="submit"
-                                class="bg-yellow-400 text-white px-6 py-2 rounded hover:bg-yellow-500">
+                                class="bg-yellow-400 text-black px-6 py-2 rounded hover:bg-yellow-500">
                             Update Event
                         </button>
                         <a href="{{ route('events.index') }}"

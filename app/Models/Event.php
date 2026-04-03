@@ -6,7 +6,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-// Relation: 1 Event belong to 1 User
+    protected $fillable = [
+        'title',
+        'description',
+        'date',
+        'time',
+        'location',
+        'capacity',
+        'status',
+        'user_id',
+    ];
+
+    protected $casts = [
+        'date' => 'date',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);

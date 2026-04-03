@@ -16,7 +16,7 @@
 
             <div class="mb-4">
                 <a href="{{ route('events.create') }}"
-                   class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                   class="bg-blue-500 text-black px-4 py-2 rounded hover:bg-blue-600">
                     + Add Event
                 </a>
             </div>
