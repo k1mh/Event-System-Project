@@ -56,21 +56,40 @@ class EventController extends Controller
 
     public function edit(Event $event) 
     {
-     
+       return view('events.edit', compact('event'));
     }
 
 
     public function update(Request $request, Event $event) 
     {
-     
-    }
+        $request->validate([
+            'title'       => 'required|string|max:255',
+            'description' => 'required|string',
+            'date'        => 'required|date',
+            'time'        => 'required',
+            'location'    => 'required|string|max:255',
+            'capacity'    => 'nullable|integer',
+        ]);
 
- 
-    public function destroy(Event $event) 
-    {
-        $event->delete();
+        $event->update([
+            'title'       => $request->title,
+            'description' => $request->description,
+            'date'        => $request->date,
+            'time'        => $request->time,
+            'location'    => $request->location,
+            'capacity'    => $request->capacity,
+        ]);
 
         return redirect()->route('events.index')
-                         ->with('success', 'Event deleted successfully!');
-    }
+                        ->with('success', 'Event updated successfully!');
+        }
+
+    
+        public function destroy(Event $event) 
+        {
+            $event->delete();
+
+            return redirect()->route('events.index')
+                            ->with('success', 'Event deleted successfully!');
+        }
 }
