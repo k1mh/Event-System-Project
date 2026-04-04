@@ -14,7 +14,12 @@ class EventController extends Controller
         return view('events.index', compact('events'));
     }
 
-
+    // This handles the Management Page (Edit/Delete List)
+    public function display()
+    {
+        $events = Event::all();
+        return view('events.display', compact('events'));
+    }
     public function create()
     {
         return view('events.create');

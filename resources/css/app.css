@@ -1,3 +1,117 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 1. Global Reset & Background */
+.auth-background {
+    background-color: #ffffff !important;
+    background-image: 
+        radial-gradient(circle at 5% 90%, rgba(0, 200, 150, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 95% 10%, rgba(0, 200, 150, 0.25) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(0, 200, 150, 0.1) 0%, transparent 60%) !important;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+/* 2. Logo Scaling */
+.logo-size {
+    height: 75px !important; /* Fixed professional height */
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo-size:hover {
+    transform: scale(1.05);
+}
+
+/* 3. The Login Card */
+.login-card {
+    background-color: #0d1b2a !important; /* Deep Navy from your design */
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.login-card h2 {
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+/* 4. Form Labels & Inputs */
+.form-label {
+    color: #a0aec0; /* Soft gray for labels */
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    display: block;
+    font-weight: 500;
+}
+
+.form-input {
+    background-color: #F5F7FA !important; /* Your specific Gray color */
+    border: 2px solid transparent !important;
+    border-radius: 12px !important;
+    padding: 14px 16px !important;
+    color: #1a202c !important; /* Dark text for readability */
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-input:focus {
+    outline: none !important;
+    background-color: #ffffff !important;
+    border-color: #00C896 !important; /* Vibrant Green Glow on focus */
+    box-shadow: 0 0 0 4px rgba(0, 200, 150, 0.1) !important;
+}
+
+/* 5. Primary Action Button */
+.btn-primary {
+    background-color: #00C896 !important; /* Your Vibrant Green */
+    color: #F5F7FA !important; 
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    width: 100%;
+    margin-top: 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 200, 150, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #00e0a7 !important; /* Slightly brighter on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 200, 150, 0.4);
+    cursor: pointer;
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* 6. Links & Hover States */
+.hover-link {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.hover-link:hover {
+    color: #00C896 !important; /* Green hover for "Forgot Password" */
+    text-decoration: underline;
+}
+
+/* Helper for secondary Green text */
+.text-secondary {
+    color: #00C896 !important;
+}
