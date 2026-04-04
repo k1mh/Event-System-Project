@@ -14,7 +14,12 @@ class EventController extends Controller
         return view('events.index', compact('events'));
     }
 
-
+    // This handles the Management Page (Edit/Delete List)
+    public function display()
+    {
+        $events = Event::all();
+        return view('events.display', compact('events'));
+    }
     public function create()
     {
         return view('events.create');
@@ -30,7 +35,6 @@ class EventController extends Controller
             'time'        => 'required',
             'location'    => 'required|string|max:255',
             'capacity'    => 'nullable|integer',
-            'status'      => 'required',
             
         ]);
 
@@ -41,11 +45,11 @@ class EventController extends Controller
             'time'        => $request->time,
             'location'    => $request->location,
             'capacity'    => $request->capacity,
-            'status'      => $request->status,   
+            'status'      => 'upcoming',   
             'user_id'     => auth()->id(), 
         ]);
 
-        return redirect()->route('events.index')
+        return redirect()->route('events.display')
                          ->with('success', 'Event created successfully!');
     }
 
@@ -84,7 +88,7 @@ class EventController extends Controller
             'status'      => $request->status,
         ]);
 
-        return redirect()->route('events.index')
+        return redirect()->route('events.display')
                         ->with('success', 'Event updated successfully!');
         }
 
@@ -93,7 +97,7 @@ class EventController extends Controller
         {
             $event->delete();
 
-            return redirect()->route('events.index')
+            return redirect()->route('events.display')
                             ->with('success', 'Event deleted successfully!');
         }
 }
