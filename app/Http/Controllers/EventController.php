@@ -30,6 +30,8 @@ class EventController extends Controller
             'time'        => 'required',
             'location'    => 'required|string|max:255',
             'capacity'    => 'nullable|integer',
+            'status'      => 'required',
+            
         ]);
 
         Event::create([
@@ -39,7 +41,7 @@ class EventController extends Controller
             'time'        => $request->time,
             'location'    => $request->location,
             'capacity'    => $request->capacity,
-            'status'      => 'upcoming',   
+            'status'      => $request->status,   
             'user_id'     => auth()->id(), 
         ]);
 
@@ -69,6 +71,7 @@ class EventController extends Controller
             'time'        => 'required',
             'location'    => 'required|string|max:255',
             'capacity'    => 'nullable|integer',
+            'status'      => 'required',
         ]);
 
         $event->update([
@@ -78,6 +81,7 @@ class EventController extends Controller
             'time'        => $request->time,
             'location'    => $request->location,
             'capacity'    => $request->capacity,
+            'status'      => $request->status,
         ]);
 
         return redirect()->route('events.index')

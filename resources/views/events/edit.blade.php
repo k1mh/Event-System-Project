@@ -52,6 +52,8 @@
                                class="mt-1 w-full border rounded px-3 py-2" required>
                         @error('location') <p class="text-red-500 text-sm mt-1">{{ $message }}</p> @enderror
                     </div>
+                     
+                  
 
                     {{-- Capacity --}}
                     <div class="mb-4">
@@ -60,6 +62,33 @@
                                class="mt-1 w-full border rounded px-3 py-2">
                         @error('capacity') <p class="text-red-500 text-sm mt-1">{{ $message }}</p> @enderror
                     </div>
+                    {{-- status --}}
+                      <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700">Status</label>
+
+                                <select name="status" class="mt-1 w-full border rounded px-3 py-2" required>
+                                    <option value="">-- Select Status --</option>
+
+                                    <option value="upcoming" 
+                                        {{ old('status', $event->status) == 'upcoming' ? 'selected' : '' }}>
+                                        Upcoming
+                                    </option>
+
+                                    <option value="ongoing" 
+                                        {{ old('status', $event->status) == 'ongoing' ? 'selected' : '' }}>
+                                        On Going
+                                    </option>
+
+                                    <option value="completed" 
+                                        {{ old('status', $event->status) == 'completed' ? 'selected' : '' }}>
+                                        Completed
+                                    </option>
+                                </select>
+
+                                @error('status') 
+                                    <p class="text-red-500 text-sm mt-1">{{ $message }}</p> 
+                                @enderror
+                            </div>
 
                     {{-- Buttons --}}
                     <div class="flex gap-3">
