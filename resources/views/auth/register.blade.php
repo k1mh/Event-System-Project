@@ -3,7 +3,7 @@
         
         <div class="mb-8">
             <a href="/">
-                <img src="{{ asset('image/TechHub_Admin_Logo.png') }}" class="logo-size mx-auto" alt="Logo">
+                <img src="{{ asset('image/TechHub_Admin_Logo.png') }}" class="logo-size mx-auto" alt="Logo" width="250" height="75">
             </a>
         </div>
 
