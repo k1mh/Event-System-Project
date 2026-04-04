@@ -48,7 +48,7 @@ class EventController extends Controller
             'user_id'     => auth()->id(), 
         ]);
 
-        return redirect()->route('events.index')
+        return redirect()->route('events.display')
                          ->with('success', 'Event created successfully!');
     }
 
@@ -85,7 +85,7 @@ class EventController extends Controller
             'capacity'    => $request->capacity,
         ]);
 
-        return redirect()->route('events.index')
+        return redirect()->route('events.display')
                         ->with('success', 'Event updated successfully!');
         }
 
@@ -94,7 +94,7 @@ class EventController extends Controller
         {
             $event->delete();
 
-            return redirect()->route('events.index')
+            return redirect()->route('events.display')
                             ->with('success', 'Event deleted successfully!');
         }
 }

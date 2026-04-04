@@ -67,7 +67,7 @@
                                 class="bg-yellow-400 text-black px-6 py-2 rounded hover:bg-yellow-500">
                             Update Event
                         </button>
-                        <a href="{{ route('events.index') }}"
+                        <a href="{{ route('events.display') }}"
                            class="bg-gray-300 text-gray-700 px-6 py-2 rounded hover:bg-gray-400">
                             Cancel
                         </a>

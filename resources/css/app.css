@@ -115,3 +115,40 @@
 .text-secondary {
     color: #00C896 !important;
 }
+
+/* Sidebar Core */
+.sidebar {
+    background-color: #003465 !important;
+    color: white;
+}
+
+/* Sidebar Links: ICON LEFT, TEXT RIGHT */
+.sidebar-link {
+    display: flex;
+    align-items: center; /* Vertical center */
+    padding: 1rem 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    text-decoration: none;
+}
+
+.sidebar-link i {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+.sidebar-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-left-color: #00C896;
+}
+
+.sidebar-link.active i {
+    color: #00C896;
+}
