@@ -21,5 +21,5 @@ class Event extends Model
     protected $casts = [
         'date' => 'date',
     ];
-    //
+
 }
