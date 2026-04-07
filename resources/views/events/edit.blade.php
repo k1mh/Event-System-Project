@@ -74,7 +74,7 @@
                     {{-- Bottom Action Buttons --}}
                     <div class="mt-10 flex justify-end gap-4">
                         <a href="{{ route('events.display') }}" class="px-8 py-3 text-gray-500 font-semibold hover:text-gray-700 transition">Cancel</a>
-                        <button type="submit" class="bg-[#003465] text-white px-10 py-3 rounded-full font-bold shadow-lg hover:bg-[#002850] transition transform hover:scale-105">
+                        <button type="submit" class="bg-[#00C896] text-[#0A2540] px-10 py-3 rounded-full font-bold shadow-lg hover:bg-[#00b386] transition transform hover:scale-105">
                             Update
                         </button>
                     </div>

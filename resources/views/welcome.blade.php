@@ -41,7 +41,7 @@
             </p>
             <p class="text-sm mb-6 font-medium">Or manage events:</p>
             
-            <a href="{{ route('login') }}" class="btn-primary !w-56 !rounded-full !py-3 !mt-0 !normal-case tracking-normal text-center inline-block">
+            <a href="{{ route('login') }}" class="btn-primary !w-56 !rounded-full !py-3 !mt-0 !normal-case tracking-normal text-center inline-block btn-glow">
                 Access as Admin
             </a>
         </div>

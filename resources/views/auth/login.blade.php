@@ -26,7 +26,7 @@
                     <a href="{{ route('password.request') }}" class="text-xs text-gray-400 hover-link">Forgot Password?</a>
                 </div>
 
-                <button type="submit" class="btn-primary">
+                <button type="submit" class="btn-primary btn-glow">
                     Login
                 </button>
                 
