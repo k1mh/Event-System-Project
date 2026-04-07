@@ -63,8 +63,8 @@
                         <td class="px-6 py-5">
                             @php
                                 $statusColor = match(strtolower($event->status)) {
-                                    'upcoming' => 'text-green-500 bg-green-50',
-                                    'ongoing' => 'text-yellow-600 bg-yellow-50',
+                                    'upcoming' => 'text-yellow-500 bg-yellow-50',
+                                    'ongoing' => 'text-green-600 bg-green-50',
                                     'completed' => 'text-red-500 bg-red-50',
                                     default => 'text-gray-500 bg-gray-50'
                                 };

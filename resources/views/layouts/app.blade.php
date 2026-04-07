@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'TechHub') }}</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     
@@ -33,7 +36,7 @@
         >
             <div class="p-6 mb-4 flex items-center justify-center border-b border-white/10 h-16 relative">
                 <template x-if="sidebarOpen">
-                    <img src="{{ asset('image/TechHub_White_Logo.png') }}" class="h-8 mx-auto object-contain" alt="Logo">
+                    <img src="{{ asset('image/TechHub_Admin_White_Logo.png') }}" class="h-8 mx-auto object-contain" alt="Logo">
                 </template>
                 <template x-if="!sidebarOpen">
                     <span class="text-white font-bold text-xl">TH</span>

@@ -14,11 +14,11 @@
         </div>
         <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
             <p class="text-gray-500 font-semibold text-sm uppercase tracking-wider mb-2">Upcoming</p>
-            <h3 class="text-3xl font-bold text-green-500">{{ $events->where('status', 'upcoming')->count() }}</h3>
+            <h3 class="text-3xl font-bold text-yellow-500">{{ $events->where('status', 'upcoming')->count() }}</h3>
         </div>
         <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
             <p class="text-gray-500 font-semibold text-sm uppercase tracking-wider mb-2">Ongoing</p>
-            <h3 class="text-3xl font-bold text-yellow-500">{{ $events->where('status', 'ongoing')->count() }}</h3>
+            <h3 class="text-3xl font-bold text-green-500">{{ $events->where('status', 'ongoing')->count() }}</h3>
         </div>
         <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
             <p class="text-gray-500 font-semibold text-sm uppercase tracking-wider mb-2">Completed</p>
@@ -74,8 +74,8 @@
                         <td class="px-6 py-5">
                             @php
                                 $statusColor = match(strtolower($event->status)) {
-                                    'upcoming' => 'text-green-500 bg-green-50',
-                                    'ongoing' => 'text-yellow-600 bg-yellow-50',
+                                    'upcoming' => 'text-yellow-500 bg-yellow-50',
+                                    'ongoing' => 'text-green-600 bg-green-50',
                                     'completed' => 'text-red-500 bg-red-50',
                                     default => 'text-gray-500 bg-gray-50'
                                 };
@@ -135,7 +135,7 @@
                     labels: ['Upcoming', 'Ongoing', 'Completed'],
                     datasets: [{
                         data: [upcoming, ongoing, completed],
-                        backgroundColor: ['#22c55e', '#eab308', '#ef4444'],
+                        backgroundColor: ['#eab308', '#08ea40', '#ef4444'],
                         hoverOffset: 10,
                         borderWidth: 0
                     }]

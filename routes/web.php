@@ -3,10 +3,13 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
-
+use App\Models\Event;
 
 Route::get('/', function () {
-    return view('welcome');
+    // Fetch all events, or use paginate(12) if you have many
+    $events = Event::orderBy('date', 'asc')->get(); 
+
+    return view('welcome', compact('events'));
 });
 
 Route::middleware('auth')->group(function () {
