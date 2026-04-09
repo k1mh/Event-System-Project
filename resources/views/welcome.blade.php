@@ -57,8 +57,11 @@
                 <h3 class="text-white text-2xl font-bold mb-2">{{ $event->title }}</h3>
                 
                 <p class="text-gray-400 text-sm mb-8">
-                    Date: {{ \Carbon\Carbon::parse($event->date)->format('Y-m-d') }}
+                    Date: {{ \Carbon\Carbon::parse($event->date)->format('Y-m-d') }} <br>
+                     <i class="fa-solid fa-location-dot mr-2 text-gray-400"></i>
+                    {{ $event->location }}
                 </p>
+
                 
                 @php
                     $status = strtolower($event->status); 
